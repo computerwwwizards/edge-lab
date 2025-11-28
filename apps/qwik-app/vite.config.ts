@@ -57,6 +57,9 @@ export default defineConfig(({ command, mode }): UserConfig => {
         // Don't cache the server response in dev mode
         "Cache-Control": "public, max-age=0",
       },
+      watch: {
+        ignored: ["**/node_modules/**", "**/.git/**", "**/specs/**"],
+      }
     },
     preview: {
       headers: {
