@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Hero from "~/components/hero";
 import Benefits from "~/components/benefits";
 import MostWanted from "~/components/most-wanted";
+import Promotion from "~/components/promotion";
 
 export default component$(() => {
   return (
@@ -80,6 +81,12 @@ export default component$(() => {
             backgroundColor: '#D1D5DB'
           }
         ]}
+      />
+      <Promotion
+        title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+        description=""
+        buttonText="Check it out"
+        buttonUrl="/promotions"
       />
     </>
   );
