@@ -11,8 +11,8 @@ export default component$(() => {
       <Hero
         title="New Products Available"
         subtitle="At FastStore you can shop the best tech of 2023. Enjoy and get 10% off on your first purchase!"
-        mobileBackgroundImage="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=768&h=512&fit=crop"
-        desktopBackgroundImage="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=960&h=1080&fit=crop"
+        mobileBackgroundImage="/images/hero-mobile.webp"
+        desktopBackgroundImage="/images/hero-desktop.webp"
         ctaText="See all"
         ctaUrl="/products"
       />
