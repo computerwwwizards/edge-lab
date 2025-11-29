@@ -1,4 +1,4 @@
-import { component$, Slot, type JSX } from '@builder.io/qwik'
+import { component$, Slot } from '@builder.io/qwik'
 import { tv, type VariantProps } from 'tailwind-variants/lite'
 
 const buttonVariants = tv({
@@ -19,8 +19,9 @@ const buttonVariants = tv({
   }
 })
 
-export interface ButtonProps extends Omit<JSX.IntrinsicElements['button'], 'children'>, VariantProps<typeof buttonVariants> {
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
   as?: 'button' | 'a'
+  [key: string]: any
 }
 
 export default component$<ButtonProps>(({

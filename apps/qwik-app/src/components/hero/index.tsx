@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik'
+import Button from '../ui/button'
 
 export interface HeroProps {
   title: string
@@ -22,15 +23,18 @@ export default component$<HeroProps>(({ title, subtitle, mobileBackgroundImage, 
             {subtitle}
           </p>
 
-          <a
+          <Button
+            appearance="secondary"
+            as="a"
             href={ctaUrl}
-            class="inline-flex items-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            {ctaText}
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="ml-1">
-              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
+            <span class="flex items-center gap-2">
+              {ctaText}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </Button>
         </div>
       </div>
 
