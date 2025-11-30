@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from 'storybook-framework-qwik'
 import Hero from './index'
 
 const meta: Meta<typeof Hero> = {
-  title: 'Components/Hero',
+  title: 'Sections/Hero',
   component: Hero,
   parameters: {
     layout: 'fullscreen',

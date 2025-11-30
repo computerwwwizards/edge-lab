@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from 'storybook-framework-qwik'
 import Promotion from './index'
 
 const meta: Meta<typeof Promotion> = {
-  title: 'Components/Promotion',
+  title: 'Sections/Promotion',
   component: Promotion,
   parameters: {
     layout: 'fullscreen',

@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik'
-import Button from '../ui/button'
+import Button from '~/components/ui/button'
 
 export interface PromotionProps {
   title: string

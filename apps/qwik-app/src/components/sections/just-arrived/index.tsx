@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
-import Badge from '../../ui/badge'
-import { ResponsiveImage } from '../../primitives/ResponsiveImage'
+import Badge from '~/components/ui/badge'
+import { ResponsiveImage } from '~/components/primitives/ResponsiveImage'
 
 interface ProductImage {
   mobile: string

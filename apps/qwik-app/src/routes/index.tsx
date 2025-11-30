@@ -1,10 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Hero from "~/components/hero";
-import Benefits from "~/components/benefits";
-import MostWanted from "~/components/most-wanted";
+import Hero from "~/components/sections/hero";
+import Benefits from "~/components/sections/benefits";
+import MostWanted from "~/components/sections/most-wanted";
 import JustArrived from "~/components/sections/just-arrived";
-import Promotion from "~/components/promotion";
+import Promotion from "~/components/sections/promotion";
 
 export default component$(() => {
   return (

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from 'storybook-framework-qwik'
 import MostWanted from './index'
 
 const meta: Meta<typeof MostWanted> = {
-  title: 'Components/MostWanted',
+  title: 'Sections/MostWanted',
   component: MostWanted,
   parameters: {
     layout: 'fullscreen',

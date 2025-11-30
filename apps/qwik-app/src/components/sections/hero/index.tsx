@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
-import Button from '../ui/button'
-import { ResponsiveImage } from '../primitives/ResponsiveImage'
+import Button from '~/components/ui/button'
+import { ResponsiveImage } from '~/components/primitives/ResponsiveImage'
 
 export interface HeroProps {
   title: string

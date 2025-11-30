@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from 'storybook-framework-qwik'
 import Benefits from './index'
 
 const meta: Meta<typeof Benefits> = {
-  title: 'Components/Benefits',
+  title: 'Sections/Benefits',
   component: Benefits,
   parameters: {
     layout: 'fullscreen',
