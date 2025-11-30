@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Hero from "~/components/hero";
 import Benefits from "~/components/benefits";
 import MostWanted from "~/components/most-wanted";
+import JustArrived from "~/components/sections/just-arrived";
 import Promotion from "~/components/promotion";
 
 export default component$(() => {
@@ -99,6 +100,34 @@ export default component$(() => {
             originalPrice: 'US$ 100',
             discount: '10% OFF',
             backgroundColor: '#D1D5DB'
+          }
+        ]}
+      />
+      <JustArrived
+        products={[
+          {
+            image: {
+              mobile: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=280&h=280&fit=crop',
+              tablet: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=320&h=320&fit=crop',
+              desktop: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=380&h=380&fit=crop',
+              alt: 'Headphone'
+            },
+            title: 'Headphone',
+            price: 'US$ 136,62',
+            originalPrice: 'US$ 200',
+            discount: '32% OFF'
+          },
+          {
+            image: {
+              mobile: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=280&h=280&fit=crop',
+              tablet: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=320&h=320&fit=crop',
+              desktop: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=380&h=380&fit=crop',
+              alt: 'Mirrorless Camera with FE 24-120mm'
+            },
+            title: 'Mirrorless Camera with FE 24-120mm',
+            price: 'US$ 960',
+            originalPrice: 'US$ 978',
+            discount: '2% OFF'
           }
         ]}
       />
