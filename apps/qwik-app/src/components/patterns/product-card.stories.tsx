@@ -12,7 +12,7 @@ const meta: Meta = {
 export default meta
 type Story = StoryObj
 
-const productData = {
+const headphoneData = {
   image: {
     mobile: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=280&h=280&fit=crop',
     tablet: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=320&h=320&fit=crop',
@@ -25,6 +25,17 @@ const productData = {
   discount: '32% OFF'
 }
 
+const controllerData = {
+  image: {
+    mobile: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=280&h=280&fit=crop',
+    tablet: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=320&h=320&fit=crop',
+    desktop: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=380&h=380&fit=crop',
+    alt: 'Wireless Controller for Video Game'
+  },
+  title: 'Wireless Controller for Video Game',
+  price: 'US$ 60'
+}
+
 export const Compact: Story = {
   parameters: {
     viewport: {
@@ -32,52 +43,46 @@ export const Compact: Story = {
     },
   },
   render: () => (
-    <div class="w-full max-w-sm bg-white rounded-lg overflow-hidden shadow-sm">
-      <div class="relative bg-gradient-to-br from-pink-300 via-pink-200 to-orange-300 aspect-square flex items-center justify-center p-8">
-        <div class="absolute bottom-4 left-4">
-          <Badge appearance="green">
-            {productData.discount}
-          </Badge>
-        </div>
-        <ResponsiveImage
-          sources={[
-            {
-              srcset: productData.image.desktop,
-              media: '(min-width: 1024px)',
-            },
-            {
-              srcset: productData.image.tablet,
-              media: '(min-width: 768px) and (max-width: 1023px)',
-            },
-            {
-              srcset: productData.image.mobile,
-              media: '(max-width: 767px)',
-            },
-          ]}
-          src={productData.image.mobile}
-          alt={productData.image.alt}
-          width="280"
-          height="280"
-          class="max-w-[70%] max-h-[70%] object-contain drop-shadow-lg"
-          pictureProps={{
-            class: "w-full h-full flex items-center justify-center"
-          }}
-        />
-      </div>
+    <div class="w-full max-w-sm">
+      <ResponsiveImage
+        sources={[
+          {
+            srcset: headphoneData.image.desktop,
+            media: '(min-width: 1024px)',
+          },
+          {
+            srcset: headphoneData.image.tablet,
+            media: '(min-width: 768px) and (max-width: 1023px)',
+          },
+          {
+            srcset: headphoneData.image.mobile,
+            media: '(max-width: 767px)',
+          },
+        ]}
+        src={headphoneData.image.mobile}
+        alt={headphoneData.image.alt}
+        width="280"
+        height="280"
+        class="w-full h-auto"
+      />
 
-      <div class="p-4">
-        <h3 class="font-medium text-gray-900 mb-2 text-base">
-          {productData.title}
+      <div class="pt-3">
+        <h3 class="font-medium text-gray-900 mb-1 text-base">
+          {headphoneData.title}
         </h3>
 
-        <div class="flex items-baseline gap-2">
+        <div class="flex items-baseline gap-2 mb-2">
           <span class="text-sm text-gray-500 line-through">
-            {productData.originalPrice}
+            {headphoneData.originalPrice}
           </span>
           <span class="text-lg font-bold text-gray-900">
-            {productData.price}
+            {headphoneData.price}
           </span>
         </div>
+
+        <Badge appearance="green">
+          {headphoneData.discount}
+        </Badge>
       </div>
     </div>
   ),
@@ -90,52 +95,48 @@ export const Expanded: Story = {
     },
   },
   render: () => (
-    <div class="w-full max-w-sm bg-white rounded-lg overflow-hidden shadow-sm">
-      <div class="relative bg-gradient-to-br from-pink-300 via-pink-200 to-orange-300 aspect-square flex items-center justify-center p-12">
-        <div class="absolute top-4 right-4">
-          <Badge appearance="green">
-            {productData.discount}
-          </Badge>
-        </div>
-        <ResponsiveImage
-          sources={[
-            {
-              srcset: productData.image.desktop,
-              media: '(min-width: 1024px)',
-            },
-            {
-              srcset: productData.image.tablet,
-              media: '(min-width: 768px) and (max-width: 1023px)',
-            },
-            {
-              srcset: productData.image.mobile,
-              media: '(max-width: 767px)',
-            },
-          ]}
-          src={productData.image.mobile}
-          alt={productData.image.alt}
-          width="280"
-          height="280"
-          class="max-w-[80%] max-h-[80%] object-contain drop-shadow-lg"
-          pictureProps={{
-            class: "w-full h-full flex items-center justify-center"
-          }}
-        />
-      </div>
+    <div class="w-full max-w-sm">
+      <ResponsiveImage
+        sources={[
+          {
+            srcset: headphoneData.image.desktop,
+            media: '(min-width: 1024px)',
+          },
+          {
+            srcset: headphoneData.image.tablet,
+            media: '(min-width: 768px) and (max-width: 1023px)',
+          },
+          {
+            srcset: headphoneData.image.mobile,
+            media: '(max-width: 767px)',
+          },
+        ]}
+        src={headphoneData.image.mobile}
+        alt={headphoneData.image.alt}
+        width="380"
+        height="380"
+        class="w-full h-auto"
+      />
 
-      <div class="p-5">
-        <h3 class="font-medium text-gray-900 mb-2 text-lg">
-          {productData.title}
-        </h3>
+      <div class="pt-4 flex items-start justify-between">
+        <div>
+          <h3 class="font-medium text-gray-900 mb-1 text-base">
+            {headphoneData.title}
+          </h3>
 
-        <div class="flex items-baseline gap-2">
-          <span class="text-sm text-gray-500 line-through">
-            {productData.originalPrice}
-          </span>
-          <span class="text-xl font-bold text-gray-900">
-            {productData.price}
-          </span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-sm text-gray-500 line-through">
+              {headphoneData.originalPrice}
+            </span>
+            <span class="text-lg font-bold text-gray-900">
+              {headphoneData.price}
+            </span>
+          </div>
         </div>
+
+        <Badge appearance="green">
+          {headphoneData.discount}
+        </Badge>
       </div>
     </div>
   ),
@@ -143,51 +144,85 @@ export const Expanded: Story = {
 
 export const Responsive: Story = {
   render: () => (
-    <div class="w-full max-w-sm bg-white rounded-lg overflow-hidden shadow-sm">
-      <div class="relative bg-gradient-to-br from-pink-300 via-pink-200 to-orange-300 aspect-square flex items-center justify-center p-8 md:p-12">
-        <div class="absolute bottom-4 left-4 md:bottom-auto md:left-auto md:top-4 md:right-4">
-          <Badge appearance="green">
-            {productData.discount}
-          </Badge>
-        </div>
-        <ResponsiveImage
-          sources={[
-            {
-              srcset: productData.image.desktop,
-              media: '(min-width: 1024px)',
-            },
-            {
-              srcset: productData.image.tablet,
-              media: '(min-width: 768px) and (max-width: 1023px)',
-            },
-            {
-              srcset: productData.image.mobile,
-              media: '(max-width: 767px)',
-            },
-          ]}
-          src={productData.image.mobile}
-          alt={productData.image.alt}
-          width="280"
-          height="280"
-          class="max-w-[70%] md:max-w-[80%] max-h-[70%] md:max-h-[80%] object-contain drop-shadow-lg"
-          pictureProps={{
-            class: "w-full h-full flex items-center justify-center"
-          }}
-        />
-      </div>
+    <div class="w-full max-w-sm">
+      <ResponsiveImage
+        sources={[
+          {
+            srcset: headphoneData.image.desktop,
+            media: '(min-width: 1024px)',
+          },
+          {
+            srcset: headphoneData.image.tablet,
+            media: '(min-width: 768px) and (max-width: 1023px)',
+          },
+          {
+            srcset: headphoneData.image.mobile,
+            media: '(max-width: 767px)',
+          },
+        ]}
+        src={headphoneData.image.mobile}
+        alt={headphoneData.image.alt}
+        width="280"
+        height="280"
+        class="w-full h-auto"
+      />
 
-      <div class="p-4 md:p-5">
-        <h3 class="font-medium text-gray-900 mb-2 text-base md:text-lg">
-          {productData.title}
+      <div class="pt-3 md:pt-4 md:flex md:items-start md:justify-between">
+        <div>
+          <h3 class="font-medium text-gray-900 mb-1 text-base">
+            {headphoneData.title}
+          </h3>
+
+          <div class="flex items-baseline gap-2 mb-2 md:mb-0">
+            <span class="text-sm text-gray-500 line-through">
+              {headphoneData.originalPrice}
+            </span>
+            <span class="text-lg font-bold text-gray-900">
+              {headphoneData.price}
+            </span>
+          </div>
+        </div>
+
+        <Badge appearance="green" class="md:ml-4">
+          {headphoneData.discount}
+        </Badge>
+      </div>
+    </div>
+  ),
+}
+
+export const WithoutBadge: Story = {
+  render: () => (
+    <div class="w-full max-w-sm">
+      <ResponsiveImage
+        sources={[
+          {
+            srcset: controllerData.image.desktop,
+            media: '(min-width: 1024px)',
+          },
+          {
+            srcset: controllerData.image.tablet,
+            media: '(min-width: 768px) and (max-width: 1023px)',
+          },
+          {
+            srcset: controllerData.image.mobile,
+            media: '(max-width: 767px)',
+          },
+        ]}
+        src={controllerData.image.mobile}
+        alt={controllerData.image.alt}
+        width="280"
+        height="280"
+        class="w-full h-auto"
+      />
+
+      <div class="pt-3">
+        <h3 class="font-medium text-gray-900 mb-1 text-base">
+          {controllerData.title}
         </h3>
 
-        <div class="flex items-baseline gap-2">
-          <span class="text-sm text-gray-500 line-through">
-            {productData.originalPrice}
-          </span>
-          <span class="text-lg md:text-xl font-bold text-gray-900">
-            {productData.price}
-          </span>
+        <div class="text-lg font-bold text-gray-900">
+          {controllerData.price}
         </div>
       </div>
     </div>
