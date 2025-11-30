@@ -126,6 +126,7 @@ export default component$(() => {
             },
             title: 'Mirrorless Camera with FE 24-120mm',
             price: 'US$ 960',
+            originalPrice: 'US$ 978',
             discount: '2% OFF'
           }
         ]}
