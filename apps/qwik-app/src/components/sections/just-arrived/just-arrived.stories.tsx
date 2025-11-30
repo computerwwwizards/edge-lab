@@ -26,9 +26,9 @@ const products: Product[] = [
   },
   {
     image: {
-      mobile: 'https://images.unsplash.com/photo-1606933248010-ef1f0eb0484b?w=280&h=280&fit=crop',
-      tablet: 'https://images.unsplash.com/photo-1606933248010-ef1f0eb0484b?w=320&h=320&fit=crop',
-      desktop: 'https://images.unsplash.com/photo-1606933248010-ef1f0eb0484b?w=380&h=380&fit=crop',
+      mobile: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=280&h=280&fit=crop',
+      tablet: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=320&h=320&fit=crop',
+      desktop: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=380&h=380&fit=crop',
       alt: 'Mirrorless Camera with FE 24-120mm'
     },
     title: 'Mirrorless Camera with FE 24-120mm',
