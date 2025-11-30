@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import Button from '../ui/button'
+import { ResponsiveImage } from '../primitives/ResponsiveImage'
 
 export interface HeroProps {
   title: string
@@ -39,17 +40,20 @@ export default component$<HeroProps>(({ title, subtitle, mobileBackgroundImage, 
       </div>
 
       <div class="w-full lg:w-1/2 flex items-center justify-center bg-linear-to-br from-gray-100 to-gray-200 order-1 lg:order-2">
-        <picture class="block w-full h-full">
-          <source media="(max-width: 767px)" srcset={mobileBackgroundImage} />
-          <source media="(min-width: 768px)" srcset={desktopBackgroundImage} />
-          <img
-            src={desktopBackgroundImage}
-            alt="Hero product"
-            width="658"
-            height="484"
-            class="w-full h-full object-cover"
-          />
-        </picture>
+        <ResponsiveImage
+          sources={[
+            { media: '(max-width: 767px)', srcset: mobileBackgroundImage },
+            { media: '(min-width: 768px)', srcset: desktopBackgroundImage }
+          ]}
+          alt="Hero product"
+          src={desktopBackgroundImage}
+          width={658}
+          height={484}
+          pictureProps={{
+            class: "w-full h-full"
+          }}
+          class="w-full h-full object-cover"
+        />
       </div>
     </section>
   )
