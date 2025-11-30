@@ -4,7 +4,7 @@ const config: StorybookConfig = {
   "stories": [
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [],
+  "addons": ["@storybook/addon-docs"],
   "framework": "storybook-framework-qwik",
   viteFinal: async (config) => {
     if (config.server) {
