@@ -1,9 +1,15 @@
 import { component$ } from '@builder.io/qwik'
-import Chip from '../ui/chip'
+import Badge from '../ui/badge'
+import { ResponsiveImage } from '../primitives/ResponsiveImage'
 
 export interface Product {
   id: string
-  image: string
+  image: {
+    mobile: string
+    tablet?: string
+    desktop?: string
+    alt: string
+  }
   title: string
   price: string
   originalPrice?: string
@@ -28,27 +34,36 @@ export default component$<MostWantedProps>(({ title, products }) => {
           {products.map((product) => (
             <div
               key={product.id}
-              class="flex-none w-64 md:w-auto bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200 border border-gray-100"
+              class="flex-none w-64 md:w-auto bg-white rounded-lg overflow-hidden"
             >
               <div
                 class="relative h-44 md:h-48 flex items-center justify-center p-4 md:p-6"
                 style={{ backgroundColor: product.backgroundColor }}
               >
-                <picture class="w-full h-full flex items-center justify-center">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    width="180"
-                    height="180"
-                    class="max-w-full max-h-full object-contain drop-shadow-sm"
-                  />
-                </picture>
-
-                {product.discount && (
-                  <div class="absolute top-2 left-2 md:top-3 md:left-3">
-                    <Chip variant="warning" size="sm" text={product.discount} />
-                  </div>
-                )}
+                <ResponsiveImage
+                  sources={[
+                    {
+                      srcset: product.image.desktop || product.image.tablet || product.image.mobile,
+                      media: '(min-width: 1024px)',
+                    },
+                    {
+                      srcset: product.image.tablet || product.image.mobile,
+                      media: '(min-width: 768px) and (max-width: 1023px)',
+                    },
+                    {
+                      srcset: product.image.mobile,
+                      media: '(max-width: 767px)',
+                    },
+                  ]}
+                  src={product.image.mobile}
+                  alt={product.image.alt}
+                  width="180"
+                  height="180"
+                  class="max-w-full max-h-full object-contain drop-shadow-sm"
+                  pictureProps={{
+                    class: "w-full h-full flex items-center justify-center"
+                  }}
+                />
               </div>
 
               <div class="p-3 md:p-4">
@@ -66,6 +81,14 @@ export default component$<MostWantedProps>(({ title, products }) => {
                     {product.price}
                   </span>
                 </div>
+
+                {product.discount && (
+                  <div class="mt-2">
+                    <Badge appearance="pink">
+                      {product.discount}
+                    </Badge>
+                  </div>
+                )}
               </div>
             </div>
           ))}

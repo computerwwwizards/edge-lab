@@ -2,17 +2,16 @@ import { component$, Slot } from '@builder.io/qwik'
 import { tv, type VariantProps } from 'tailwind-variants/lite'
 
 const badgeVariants = tv({
-  base: 'inline-flex items-center justify-center rounded-[16px] px-4 py-2 text-center font-medium text-sm',
+  base: 'inline-flex items-center justify-center rounded-[16px] px-3 py-1 text-center font-medium text-sm',
   variants: {
     appearance: {
-      pink: 'bg-[#FFC0CB] text-gray-900',
-      green: 'bg-[#90EE90] text-gray-900'
+      pink: 'bg-[#f7d1d1] text-gray-900',
+      green: 'bg-[#e9fce3] text-gray-900'
     }
   }
 })
 
-interface BadgeProps extends VariantProps<typeof badgeVariants> {
-  appearance: 'pink' | 'green'
+export interface BadgeProps extends VariantProps<typeof badgeVariants> {
   [key: string]: any
 }
 
