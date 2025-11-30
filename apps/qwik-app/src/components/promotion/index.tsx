@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik'
+import Button from '../ui/button'
 
 export interface PromotionProps {
   title: string
@@ -30,12 +31,13 @@ export default component$<PromotionProps>(({ title, description, buttonText, but
           )}
         </div>
 
-        <a
+        <Button
+          as="a"
           href={buttonUrl}
-          class="inline-flex items-center px-6 py-3 md:px-8 md:py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-50 transition-colors duration-300 shadow-md hover:shadow-lg text-sm md:text-base"
+          appearance="secondary"
         >
           {buttonText}
-        </a>
+        </Button>
       </div>
     </section>
   )
