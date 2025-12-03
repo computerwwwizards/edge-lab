@@ -29,9 +29,9 @@ export default component$<JustArrivedProps>(({ products }) => {
           Just Arrived
         </h2>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 max-w-6xl">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {products.map((product) => (
-            <div key={product.title} class="w-full max-w-sm">
+            <div key={product.title} class="w-full">
               <ResponsiveImage
                 sources={[
                   {
