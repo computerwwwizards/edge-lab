@@ -40,7 +40,7 @@ export default component$<DealsPromotionsProps>(({ products }) => {
               key={product.id}
               class="flex-none w-56 md:w-64 lg:w-auto bg-white rounded-lg overflow-hidden snap-start"
             >
-              <div class="relative aspect-square bg-gray-100 flex items-center justify-center p-4">
+              <div class="relative aspect-square bg-gray-100">
                 <ResponsiveImage
                   sources={[
                     {
@@ -60,10 +60,7 @@ export default component$<DealsPromotionsProps>(({ products }) => {
                   alt={product.image.alt}
                   width="280"
                   height="280"
-                  class="max-w-full max-h-full object-contain"
-                  pictureProps={{
-                    class: "w-full h-full flex items-center justify-center"
-                  }}
+                  class="w-full h-full object-cover"
                 />
               </div>
 
