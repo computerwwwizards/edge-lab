@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import UtilityBar from "~/components/ui/utility-bar";
 import Hero from "~/components/sections/hero";
 import Benefits from "~/components/sections/benefits";
 import MostWanted from "~/components/sections/most-wanted";
@@ -10,6 +11,7 @@ import Promotion from "~/components/sections/promotion";
 export default component$(() => {
   return (
     <>
+      <UtilityBar />
       <Hero
         title="New Products Available"
         subtitle="At FastStore you can shop the best tech of 2023. Enjoy and get 10% off on your first purchase!"

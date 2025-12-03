@@ -1,60 +1,23 @@
 import { component$ } from '@builder.io/qwik'
-import { tv, type VariantProps } from 'tailwind-variants/lite'
+import { tv } from 'tailwind-variants/lite'
 
 const utilityBarVariants = tv({
-  slots: {
-    container: 'bg-white',
-    content: '',
-    locationButton: 'flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors',
-    locationIcon: 'w-5 h-5',
-    locationText: 'font-medium',
-    separator: 'bg-gray-300',
-    breadcrumbs: 'flex items-center gap-2',
-    breadcrumbLink: 'text-gray-600 hover:text-gray-900 transition-colors text-sm',
-    breadcrumbSeparator: 'text-gray-400 text-sm',
-    chevronIcon: 'w-5 h-5'
-  },
-  variants: {
-    layout: {
-      desktop: {
-        container: 'border-b border-gray-200',
-        content: 'flex items-center gap-4 px-4 py-4',
-        locationButton: '',
-        separator: 'w-px h-4',
-        breadcrumbs: 'flex',
-        chevronIcon: 'hidden'
-      },
-      mobile: {
-        container: 'rounded-lg border border-gray-200 shadow-sm',
-        content: 'flex items-center justify-between px-4 py-3',
-        locationButton: 'flex-1',
-        separator: 'hidden',
-        breadcrumbs: 'hidden',
-        chevronIcon: 'block'
-      }
-    }
-  },
-  defaultVariants: {
-    layout: 'desktop'
-  }
+  base: 'bg-white rounded-lg border border-gray-200 shadow-sm md:rounded-none md:border-0 md:border-b md:shadow-none'
 })
 
-interface UtilityBarProps extends VariantProps<typeof utilityBarVariants> {
+interface UtilityBarProps {
   class?: string
 }
 
 export default component$<UtilityBarProps>(({
-  layout,
   class: className
 }: Readonly<UtilityBarProps>) => {
-  const styles = utilityBarVariants({ layout })
-
   return (
-    <div class={styles.container({ class: className })}>
-      <div class={styles.content()}>
-        <a href="#" class={styles.locationButton()}>
+    <div class={utilityBarVariants({ class: className })}>
+      <div class="flex items-center justify-between md:justify-start md:gap-4 px-4 py-3 md:py-4">
+        <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors md:flex-initial flex-1">
           <svg
-            class={styles.locationIcon()}
+            class="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -72,21 +35,22 @@ export default component$<UtilityBarProps>(({
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <span class={styles.locationText()}>
-            {layout === 'mobile' ? 'Set your location' : 'Set Your Location'}
+          <span class="font-medium">
+            <span class="md:hidden">Set your location</span>
+            <span class="hidden md:inline">Set Your Location</span>
           </span>
         </a>
 
-        <div class={styles.separator()} />
+        <div class="hidden md:block w-px h-4 bg-gray-300" />
 
-        <nav class={styles.breadcrumbs()}>
-          <a href="#" class={styles.breadcrumbLink()}>Electronics</a>
-          <span class={styles.breadcrumbSeparator()}>→</span>
-          <a href="#" class={styles.breadcrumbLink()}>Headphones</a>
+        <nav class="hidden md:flex items-center gap-2">
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">Electronics</a>
+          <span class="text-gray-400 text-sm">→</span>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors text-sm">Headphones</a>
         </nav>
 
         <svg
-          class={styles.chevronIcon()}
+          class="w-5 h-5 md:hidden"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
