@@ -5,6 +5,7 @@ import Benefits from "~/components/sections/benefits";
 import MostWanted from "~/components/sections/most-wanted";
 import DealsPromotions from "~/components/sections/deals-promotions";
 import JustArrived from "~/components/sections/just-arrived";
+import Newsletter from "~/components/sections/newsletter";
 import Promotion from "~/components/sections/promotion";
 
 export default component$(() => {
@@ -195,6 +196,7 @@ export default component$(() => {
           }
         ]}
       />
+      <Newsletter />
       <Promotion
         title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
         description=""
