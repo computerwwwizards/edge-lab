@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Header from "~/components/layout/header";
 import UtilityBar from "~/components/ui/utility-bar";
 import Hero from "~/components/sections/hero";
 import Benefits from "~/components/sections/benefits";
@@ -12,6 +13,8 @@ import Promotion from "~/components/sections/promotion";
 export default component$(() => {
   return (
     <>
+      <Header cartItemCount={3} />
+      <div class="pt-[72px]">
       <UtilityBar />
       <Hero
         title="New Products Available"
@@ -205,6 +208,7 @@ export default component$(() => {
         buttonText="Check it out"
         buttonUrl="/promotions"
       />
+      </div>
     </>
   );
 });
