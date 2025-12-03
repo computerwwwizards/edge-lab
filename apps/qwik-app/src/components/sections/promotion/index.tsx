@@ -17,27 +17,31 @@ export default component$<PromotionProps>(({ title, description, buttonText, but
   }
 
   return (
-    <section class={`w-full py-12 md:py-16 lg:py-20 px-4 ${variantClasses[variant]} rounded-lg md:rounded-xl`}>
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="mb-6 md:mb-8">
-          <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-2">
-            {title}
-          </h2>
+    <section class="w-full py-12 md:py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class={`${variantClasses[variant]} rounded-lg md:rounded-xl py-12 md:py-16 lg:py-20 px-4`}>
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-6 md:mb-8">
+              <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-2">
+                {title}
+              </h2>
 
-          {description && (
-            <p class="text-base md:text-lg text-white/95 leading-relaxed">
-              {description}
-            </p>
-          )}
+              {description && (
+                <p class="text-base md:text-lg text-white/95 leading-relaxed">
+                  {description}
+                </p>
+              )}
+            </div>
+
+            <Button
+              as="a"
+              href={buttonUrl}
+              appearance="secondary"
+            >
+              {buttonText}
+            </Button>
+          </div>
         </div>
-
-        <Button
-          as="a"
-          href={buttonUrl}
-          appearance="secondary"
-        >
-          {buttonText}
-        </Button>
       </div>
     </section>
   )
