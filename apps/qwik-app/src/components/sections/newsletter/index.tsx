@@ -71,7 +71,7 @@ export default component$(() => {
           </p>
 
           <Button
-            appearance="primary"
+            appearance="secondary"
             fullWidth
             type="button"
           >
