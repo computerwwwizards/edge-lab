@@ -37,7 +37,7 @@ export default component$<MostWantedProps>(({ title, products }) => {
               class="flex-none w-64 md:w-auto bg-white rounded-lg overflow-hidden"
             >
               <div
-                class="relative h-44 md:h-48 flex items-center justify-center p-4 md:p-6"
+                class="relative h-44 md:h-48 flex items-center justify-center"
                 style={{ backgroundColor: product.backgroundColor }}
               >
                 <ResponsiveImage
@@ -59,9 +59,9 @@ export default component$<MostWantedProps>(({ title, products }) => {
                   alt={product.image.alt}
                   width="180"
                   height="180"
-                  class="max-w-full max-h-full object-contain drop-shadow-sm"
+                  class="w-full h-full object-cover drop-shadow-sm"
                   pictureProps={{
-                    class: "w-full h-full flex items-center justify-center"
+                    class: "w-full h-full flex items-center justify-center object-cover"
                   }}
                 />
               </div>

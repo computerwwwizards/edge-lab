@@ -164,9 +164,9 @@ export default component$(() => {
               id: '5',
               name: 'Wireless Controller for Video Game',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1585857188971-9d3552c9e169?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1585857188971-9d3552c9e169?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1585857188971-9d3552c9e169?w=380&h=380&fit=crop',
+                mobile: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=280&h=280&fit=crop',
+                tablet: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=320&h=320&fit=crop',
+                desktop: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=380&h=380&fit=crop',
                 alt: 'Wireless Controller for Video Game'
               },
               price: 62.78
