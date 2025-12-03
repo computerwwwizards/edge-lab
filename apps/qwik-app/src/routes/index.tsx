@@ -9,6 +9,7 @@ import DealsPromotions from "~/components/sections/deals-promotions";
 import JustArrived from "~/components/sections/just-arrived";
 import Newsletter from "~/components/sections/newsletter";
 import Promotion from "~/components/sections/promotion";
+import Footer from "~/components/sections/footer";
 
 export default component$(() => {
   return (
@@ -208,6 +209,7 @@ export default component$(() => {
           buttonText="Check it out"
           buttonUrl="/promotions"
         />
+        <Footer />
       </div>
     </>
   );
