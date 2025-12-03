@@ -1,34 +1,5 @@
 import { component$ } from '@builder.io/qwik'
-import { tv } from 'tailwind-variants/lite'
 import Input, { InputWrapper } from '~/components/ui/input'
-
-const headerVariants = tv({
-  base: 'w-full border-b border-[#E5E5E5] bg-white'
-})
-
-const containerVariants = tv({
-  base: 'flex items-center justify-between px-4 py-4 lg:px-8'
-})
-
-const logoVariants = tv({
-  base: 'text-xl font-bold text-[#1A1A1A] lg:text-2xl'
-})
-
-const searchWrapperVariants = tv({
-  base: 'hidden lg:flex lg:flex-1 lg:mx-8 lg:max-w-2xl'
-})
-
-const actionsVariants = tv({
-  base: 'flex items-center gap-4 lg:gap-6'
-})
-
-const iconButtonVariants = tv({
-  base: 'flex items-center justify-center p-2 text-[#1A1A1A] hover:text-[#2563EB] transition-colors'
-})
-
-const cartBadgeVariants = tv({
-  base: 'absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-[#2563EB] text-white text-xs font-semibold rounded-full'
-})
 
 interface HeaderProps {
   cartItemCount?: number
@@ -36,10 +7,10 @@ interface HeaderProps {
 
 export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
   return (
-    <header class={headerVariants()}>
-      <div class={containerVariants()}>
+    <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-[#E5E5E5] bg-white">
+      <div class="flex items-center justify-between px-4 py-4 lg:px-8">
         <button
-          class={`${iconButtonVariants()} lg:hidden`}
+          class="flex items-center justify-center p-2 text-[#1A1A1A] hover:text-[#2563EB] transition-colors lg:hidden"
           aria-label="Open menu"
         >
           <svg
@@ -59,12 +30,12 @@ export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
 
         <a
           href="#"
-          class={logoVariants()}
+          class="text-xl font-bold text-[#1A1A1A] lg:text-2xl"
         >
           Brandless
         </a>
 
-        <div class={searchWrapperVariants()}>
+        <div class="hidden lg:flex lg:flex-1 lg:mx-8 lg:max-w-2xl">
           <InputWrapper fullWidth>
             <svg
               class="w-5 h-5 ml-3 text-gray-400"
@@ -83,9 +54,9 @@ export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
           </InputWrapper>
         </div>
 
-        <div class={actionsVariants()}>
+        <div class="flex items-center gap-4 lg:gap-6">
           <button
-            class={`${iconButtonVariants()} lg:hidden`}
+            class="flex items-center justify-center p-2 text-[#1A1A1A] hover:text-[#2563EB] transition-colors lg:hidden"
             aria-label="Search"
           >
             <svg
@@ -124,7 +95,7 @@ export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
           </a>
 
           <button
-            class={`${iconButtonVariants()} relative`}
+            class="flex items-center justify-center p-2 text-[#1A1A1A] hover:text-[#2563EB] transition-colors relative"
             aria-label="Cart"
           >
             <svg
@@ -141,7 +112,7 @@ export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
               />
             </svg>
             {cartItemCount > 0 && (
-              <span class={cartBadgeVariants()}>
+              <span class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-[#2563EB] text-white text-xs font-semibold rounded-full">
                 {cartItemCount}
               </span>
             )}

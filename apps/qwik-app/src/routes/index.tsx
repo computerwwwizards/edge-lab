@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Header from "~/components/layout/header";
 import Hero from "~/components/sections/hero";
 import Benefits from "~/components/sections/benefits";
 import MostWanted from "~/components/sections/most-wanted";
@@ -11,7 +12,9 @@ import Promotion from "~/components/sections/promotion";
 export default component$(() => {
   return (
     <>
-      <Hero
+      <Header cartItemCount={3} />
+      <div class="pt-[72px]">
+        <Hero
         title="New Products Available"
         subtitle="At FastStore you can shop the best tech of 2023. Enjoy and get 10% off on your first purchase!"
         mobileBackgroundImage="/images/hero-mobile.webp"
@@ -203,6 +206,7 @@ export default component$(() => {
         buttonText="Check it out"
         buttonUrl="/promotions"
       />
+      </div>
     </>
   );
 });
