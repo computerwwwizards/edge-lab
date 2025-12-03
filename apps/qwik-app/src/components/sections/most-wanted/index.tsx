@@ -59,9 +59,9 @@ export default component$<MostWantedProps>(({ title, products }) => {
                   alt={product.image.alt}
                   width="180"
                   height="180"
-                  class="max-w-full max-h-full object-contain drop-shadow-sm"
+                  class="w-full h-full object-cover"
                   pictureProps={{
-                    class: "w-full h-full flex items-center justify-center"
+                    class: "w-full h-full"
                   }}
                 />
               </div>
