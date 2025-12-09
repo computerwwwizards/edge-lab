@@ -9,6 +9,7 @@ import DealsPromotions from "~/components/sections/deals-promotions";
 import JustArrived from "~/components/sections/just-arrived";
 import Newsletter from "~/components/sections/newsletter";
 import Promotion from "~/components/sections/promotion";
+import Button from "~/components/ui/button";
 
 export default component$(() => {
   return (
@@ -59,57 +60,54 @@ export default component$(() => {
             {
               id: '1',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=200&h=200&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=300&h=300&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=400&fit=crop',
+                mobile: '/iwantend/ps4controllerwhite.webp',
+                tablet: '/iwantend/ps4controllerwhite.webp',
+                desktop: '/iwantend/ps4controllerwhite.webp',
                 alt: 'Wireless Controller for Video Game'
               },
               title: 'Wireless Controller for Video Game',
               price: 'US$ 60',
-              backgroundColor: '#8B5CF6'
             },
             {
               id: '2',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=200&h=200&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop',
+                mobile: '/iwantend/jblpro.webp',
+                tablet: '/iwantend/jblpro.webp',
+                desktop: '/iwantend/jblpro.webp',
                 alt: 'Bluetooth Speaker'
               },
               title: 'Bluetooth Speaker',
               price: 'US$ 22',
               originalPrice: 'US$ 45',
               discount: '51% OFF',
-              backgroundColor: '#FDE68A'
             },
             {
               id: '3',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=200&h=200&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=300&h=300&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=400&h=400&fit=crop',
+                mobile: '/iwantend/canonpro.webp',
+                tablet: '/iwantend/canonpro.webp',
+                desktop: '/iwantend/canonpro.webp',
                 alt: 'Mirrorless Camera with FE 28-70mm'
               },
               title: 'Mirrorless Camera with FE 28-70mm',
               price: 'US$ 1.050',
-              backgroundColor: '#FB923C'
             },
             {
               id: '4',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=200&h=200&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300&h=300&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop',
+                mobile: '/iwantend/keyboard.webp',
+                tablet: '/iwantend/keyboard.webp',
+                desktop: '/iwantend/keyboard.webp',
                 alt: 'Mechanical Keyboard'
               },
               title: 'Mechanical Keyboard',
               price: 'US$ 90',
               originalPrice: 'US$ 100',
               discount: '10% OFF',
-              backgroundColor: '#D1D5DB'
             }
           ]}
         />
+
         <DealsPromotions
           products={[
             {

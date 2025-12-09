@@ -7,7 +7,7 @@ export default component$(() => {
     <section class="w-full py-12 md:py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
-          <div class="mb-4 md:mb-6 flex justify-center">
+          <div class="mb-4 md:mb-6 flex justify-center align-items-center">
             <svg
               width="48"
               height="48"
@@ -31,11 +31,14 @@ export default component$(() => {
                 stroke-linejoin="round"
               />
             </svg>
+
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 flex items-center justify-center">
+              Get News and Special Offers!
+            </h2>
+
           </div>
 
-          <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
-            Get News and Special Offers!
-          </h2>
+          
 
           <p class="text-sm md:text-base text-gray-600 mb-6 md:mb-8 leading-relaxed">
             Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information{' '}
