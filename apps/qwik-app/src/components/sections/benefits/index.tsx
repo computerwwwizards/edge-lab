@@ -18,15 +18,14 @@ export default component$<BenefitsProps>(({ benefits }) => {
           {benefits.map((benefit, index) => (
             <div
               key={`benefit-${index}`}
-              class="flex-none w-56 flex items-center justify-center gap-3 px-4 py-4 md:w-auto md:flex-1 md:flex-col md:items-center md:text-center md:px-6 md:py-6 relative"
-            >
-              <div class="flex items-center justify-center w-8 h-8 md:w-12 md:h-12 md:mb-3 shrink-0">
+              class="flex-none w-56 flex items-center justify-center gap-3 px-4 py-4 md:w-auto md:flex-1 md:flex-col md:items-center md:text-center md:px-6 md:py-6 md:h-full md:justify-start relative">
+              <div class="flex items-center justify-center w-12 h-12 mb-3 shrink-0">
                 <img
                   src={benefit.icon}
                   alt={`${benefit.title} icon`}
-                  width="32"
-                  height="32"
-                  class="w-8 h-8 md:w-12 md:h-12 object-contain"
+                  width="48"
+                  height="48"
+                  class="w-12 h-12 object-contain"
                 />
               </div>
 
