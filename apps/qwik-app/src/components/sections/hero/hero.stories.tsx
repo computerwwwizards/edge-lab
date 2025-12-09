@@ -5,7 +5,7 @@ const meta: Meta<typeof Hero> = {
   title: 'Sections/Hero',
   component: Hero,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'centered',
   },
 }
 

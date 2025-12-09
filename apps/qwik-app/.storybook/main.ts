@@ -5,6 +5,9 @@ const config: StorybookConfig = {
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": ["@storybook/addon-docs"],
+   staticDirs: [
+  { from: '../public', to: '/' }
+],
   "framework": "storybook-framework-qwik",
   viteFinal: async (config) => {
     if (config.server) {

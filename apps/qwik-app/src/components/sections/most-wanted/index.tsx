@@ -14,7 +14,7 @@ export interface Product {
   price: string
   originalPrice?: string
   discount?: string
-  backgroundColor: string
+  // backgroundColor: string
 }
 
 export interface MostWantedProps {
@@ -26,7 +26,7 @@ export default component$<MostWantedProps>(({ title, products }) => {
   return (
     <section class="w-full py-6 md:py-8 bg-white">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
+        <h2 class="text-xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
           {title}
         </h2>
 
@@ -37,8 +37,8 @@ export default component$<MostWantedProps>(({ title, products }) => {
               class="flex-none w-64 md:w-auto bg-white rounded-lg overflow-hidden"
             >
               <div
-                class="relative h-44 md:h-48 flex items-center justify-center"
-                style={{ backgroundColor: product.backgroundColor }}
+                class="relative h-64 md:h-72 flex items-center justify-center bg-gray-50"
+                // style={{ backgroundColor: product.backgroundColor }}
               >
                 <ResponsiveImage
                   sources={[
@@ -57,7 +57,7 @@ export default component$<MostWantedProps>(({ title, products }) => {
                   ]}
                   src={product.image.mobile}
                   alt={product.image.alt}
-                  width="180"
+                  width="400"
                   height="180"
                   class="w-full h-full object-cover drop-shadow-sm"
                   pictureProps={{

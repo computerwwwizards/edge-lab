@@ -6,6 +6,8 @@ const meta: Meta<typeof ResponsiveImage> = {
   component: ResponsiveImage,
   parameters: {
     layout: 'centered',
+    // layout: 'fullscreen',
+
   },
 }
 
