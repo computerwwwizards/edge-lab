@@ -25,6 +25,8 @@ export default component$<BenefitsProps>(({ benefits }) => {
                 alt={benefit.title}
                 width="32"
                 height="32"
+                loading="lazy"
+                decoding="async"
                 class="w-8 h-8 shrink-0"
               />
               <div>

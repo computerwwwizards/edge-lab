@@ -29,6 +29,7 @@ export default component$<HeroProps>(({ title, subtitle, mobileBackgroundImage, 
               height={496}
               fetchPriority="high"
               loading="eager"
+              decoding="sync"
               pictureProps={{ class: "w-full h-full" }}
               class="w-full h-full object-cover"
             />

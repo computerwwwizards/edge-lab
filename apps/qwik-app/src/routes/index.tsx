@@ -224,8 +224,7 @@ export const head: DocumentHead = {
     },
   ],
   links: [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' },
+    { rel: 'preload', as: 'image', href: '/images/hero-desktop.webp', media: '(min-width: 1024px)' },
+    { rel: 'preload', as: 'image', href: '/images/hero-mobile.webp', media: '(max-width: 1023px)' },
   ],
 };

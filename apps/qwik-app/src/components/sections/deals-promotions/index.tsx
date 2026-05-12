@@ -60,6 +60,8 @@ export default component$<DealsPromotionsProps>(({ products }) => {
                   alt={product.image.alt}
                   width="280"
                   height="280"
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover"
                 />
               </div>

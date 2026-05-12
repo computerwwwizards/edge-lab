@@ -51,6 +51,8 @@ export default component$<JustArrivedProps>(({ products }) => {
                 alt={product.image.alt}
                 width="280"
                 height="280"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-auto"
               />
 
