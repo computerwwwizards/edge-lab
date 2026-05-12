@@ -7,9 +7,9 @@ interface HeaderProps {
 
 export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
   return (
-    <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-[#E5E5E5] bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-center justify-between py-4 lg:px-4">
+    <header class="fixed top-0 left-0 right-0 z-50 w-full bg-white shadow-sm">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="flex items-center justify-between h-[56px] py-0">
           <button
             class="flex items-center justify-center p-2 text-[#1A1A1A] hover:text-[#2563EB] transition-colors lg:hidden"
             aria-label="Open menu"
@@ -31,12 +31,12 @@ export default component$<HeaderProps>(({ cartItemCount = 0 }) => {
 
           <a
             href="#"
-            class="text-xl font-bold text-[#1A1A1A] lg:text-2xl"
+            class="text-xl font-bold text-[#1A1A1A]"
           >
             Brandless
           </a>
 
-          <div class="hidden lg:flex lg:flex-1 lg:mx-8 lg:max-w-2xl">
+          <div class="hidden lg:flex lg:flex-1 lg:mx-6">
             <InputWrapper fullWidth>
               <svg
                 class="w-5 h-5 ml-3 text-gray-400"

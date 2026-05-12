@@ -11,35 +11,31 @@ export interface PromotionProps {
 
 export default component$<PromotionProps>(({ title, description, buttonText, buttonUrl, variant = 'blue' }) => {
   const variantClasses = {
-    blue: 'bg-gradient-to-r from-blue-500 to-blue-600',
+    blue: 'bg-[#0366dd]',
     purple: 'bg-gradient-to-r from-purple-500 to-purple-600',
     green: 'bg-gradient-to-r from-green-500 to-green-600'
   }
 
   return (
-    <section class="w-full py-12 md:py-16 lg:py-20">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class={`${variantClasses[variant]} rounded-lg md:rounded-xl py-12 md:py-16 lg:py-20 px-4`}>
-          <div class="max-w-4xl mx-auto text-center">
-            <div class="mb-6 md:mb-8">
-              <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-2">
-                {title}
-              </h2>
+    <section class="w-full overflow-hidden">
+      <div class="max-w-[1320px] mx-auto">
+        <div class={`${variantClasses[variant]}`}>
+          <div class="px-8 md:px-[132px] py-16 text-center">
+            <h2 class="text-lg md:text-[18px] lg:text-[28px] font-bold text-white leading-tight mb-2">
+              {title}
+            </h2>
 
-              {description && (
-                <p class="text-base md:text-lg text-white/95 leading-relaxed">
-                  {description}
-                </p>
-              )}
+            {description && (
+              <p class="text-sm md:text-base text-white/95 leading-relaxed mb-6">
+                {description}
+              </p>
+            )}
+
+            <div class="mt-8 flex justify-center">
+              <Button as="a" href={buttonUrl} appearance="secondary">
+                {buttonText}
+              </Button>
             </div>
-
-            <Button
-              as="a"
-              href={buttonUrl}
-              appearance="secondary"
-            >
-              {buttonText}
-            </Button>
           </div>
         </div>
       </div>

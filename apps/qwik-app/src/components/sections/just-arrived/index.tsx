@@ -23,9 +23,9 @@ export interface JustArrivedProps {
 
 export default component$<JustArrivedProps>(({ products }) => {
   return (
-    <section class="py-8 lg:py-12">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6 lg:text-3xl lg:mb-8">
+    <section class="py-8 md:py-10">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2 class="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-4 md:mb-6">
           Just Arrived
         </h2>
 

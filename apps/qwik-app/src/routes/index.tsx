@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Header from "~/components/layout/header";
+import Footer from "~/components/layout/footer";
 import UtilityBar from "~/components/ui/utility-bar";
 import Hero from "~/components/sections/hero";
 import Benefits from "~/components/sections/benefits";
@@ -14,7 +15,7 @@ export default component$(() => {
   return (
     <>
       <Header cartItemCount={3} />
-      <div class="pt-[72px]">
+      <div class="pt-[56px]">
         <UtilityBar />
         <Hero
           title="New Products Available"
@@ -110,15 +111,49 @@ export default component$(() => {
             }
           ]}
         />
+        <Promotion
+          title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
+          description=""
+          buttonText="Check it out"
+          buttonUrl="/promotions"
+        />
+        <JustArrived
+          products={[
+            {
+              image: {
+                mobile: '/images/airpods.webp',
+                tablet: '/images/airpods.webp',
+                desktop: '/images/airpods.webp',
+                alt: 'Headphone'
+              },
+              title: 'Headphone',
+              price: 'US$ 136,62',
+              originalPrice: 'US$ 200',
+              discount: '32% OFF'
+            },
+            {
+              image: {
+                mobile: '/images/fujifilm.webp',
+                tablet: '/images/fujifilm.webp',
+                desktop: '/images/fujifilm.webp',
+                alt: 'Mirrorless Camera with FE 24-120mm'
+              },
+              title: 'Mirrorless Camera with FE 24-120mm',
+              price: 'US$ 960',
+              originalPrice: 'US$ 978',
+              discount: '2% OFF'
+            }
+          ]}
+        />
         <DealsPromotions
           products={[
             {
               id: '1',
               name: 'Gaming Laptop',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=380&h=380&fit=crop',
+                mobile: '/images/notebook.webp',
+                tablet: '/images/notebook.webp',
+                desktop: '/images/notebook.webp',
                 alt: 'Gaming Laptop'
               },
               price: 1065.9
@@ -127,9 +162,9 @@ export default component$(() => {
               id: '2',
               name: 'Video Game Console',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=380&h=380&fit=crop',
+                mobile: '/images/xbox.webp',
+                tablet: '/images/xbox.webp',
+                desktop: '/images/xbox.webp',
                 alt: 'Video Game Console'
               },
               price: 350,
@@ -138,12 +173,12 @@ export default component$(() => {
             },
             {
               id: '3',
-              name: 'Digital Camera for Content Creator',
+              name: 'Digital Camera for Content Creators',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=380&h=380&fit=crop',
-                alt: 'Digital Camera for Content Creator'
+                mobile: '/images/canong7x.webp',
+                tablet: '/images/canong7x.webp',
+                desktop: '/images/canong7x.webp',
+                alt: 'Digital Camera for Content Creators'
               },
               price: 2080
             },
@@ -151,9 +186,9 @@ export default component$(() => {
               id: '4',
               name: 'Mini Bluetooth Speaker',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=380&h=380&fit=crop',
+                mobile: '/images/jbl.webp',
+                tablet: '/images/jbl.webp',
+                desktop: '/images/jbl.webp',
                 alt: 'Mini Bluetooth Speaker'
               },
               price: 21.6,
@@ -164,61 +199,33 @@ export default component$(() => {
               id: '5',
               name: 'Wireless Controller for Video Game',
               image: {
-                mobile: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=380&h=380&fit=crop',
+                mobile: '/images/ps3controllerred.webp',
+                tablet: '/images/ps3controllerred.webp',
+                desktop: '/images/ps3controllerred.webp',
                 alt: 'Wireless Controller for Video Game'
               },
               price: 62.78
             }
           ]}
         />
-        <JustArrived
-          products={[
-            {
-              image: {
-                mobile: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=380&h=380&fit=crop',
-                alt: 'Headphone'
-              },
-              title: 'Headphone',
-              price: 'US$ 136,62',
-              originalPrice: 'US$ 200',
-              discount: '32% OFF'
-            },
-            {
-              image: {
-                mobile: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=280&h=280&fit=crop',
-                tablet: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=320&h=320&fit=crop',
-                desktop: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=380&h=380&fit=crop',
-                alt: 'Mirrorless Camera with FE 24-120mm'
-              },
-              title: 'Mirrorless Camera with FE 24-120mm',
-              price: 'US$ 960',
-              originalPrice: 'US$ 978',
-              discount: '2% OFF'
-            }
-          ]}
-        />
         <Newsletter />
-        <Promotion
-          title="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase."
-          description=""
-          buttonText="Check it out"
-          buttonUrl="/promotions"
-        />
       </div>
+      <Footer />
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Building the Future - Modern Web Platform",
+  title: "Brandless | FastStore",
   meta: [
     {
       name: "description",
-      content: "Modern web applications built with Qwik and Tailwind CSS for optimal performance",
+      content: "Shop the best tech at Brandless. Free shipping, easy returns, and exclusive deals.",
     },
+  ],
+  links: [
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' },
   ],
 };

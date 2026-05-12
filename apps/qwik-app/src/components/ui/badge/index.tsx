@@ -2,11 +2,11 @@ import { component$, Slot } from '@builder.io/qwik'
 import { tv, type VariantProps } from 'tailwind-variants/lite'
 
 const badgeVariants = tv({
-  base: 'inline-flex items-center justify-center rounded-[16px] px-3 py-1 text-center font-medium text-sm',
+  base: 'inline-flex items-center justify-center rounded-[16px] px-2 py-0.5 text-center font-semibold text-xs',
   variants: {
     appearance: {
-      pink: 'bg-[#f7d1d1] text-gray-900',
-      green: 'bg-[#e9fce3] text-gray-900'
+      pink: 'bg-[#fde8e8] text-[#c0152e]',
+      green: 'bg-[#d1fae5] text-[#065f46]'
     }
   }
 })

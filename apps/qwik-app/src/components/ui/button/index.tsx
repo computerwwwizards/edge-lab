@@ -6,7 +6,7 @@ const buttonVariants = tv({
   variants: {
     appearance: {
       primary: 'bg-blue-600 text-white hover:bg-blue-700',
-      secondary: 'bg-white text-blue-600 border border-gray-300'
+      secondary: 'bg-white text-blue-600 hover:bg-gray-50'
     },
     fullWidth: {
       true: 'w-full',

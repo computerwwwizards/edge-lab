@@ -25,8 +25,8 @@ export interface MostWantedProps {
 export default component$<MostWantedProps>(({ title, products }) => {
   return (
     <section class="w-full py-6 md:py-8 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2 class="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-4 md:mb-6">
           {title}
         </h2>
 
@@ -34,10 +34,10 @@ export default component$<MostWantedProps>(({ title, products }) => {
           {products.map((product) => (
             <div
               key={product.id}
-              class="flex-none w-64 md:w-auto bg-white rounded-lg overflow-hidden"
+              class="flex-none w-56 md:w-auto bg-white overflow-hidden border border-[#e5e7eb] rounded-sm"
             >
               <div
-                class="relative h-44 md:h-48 flex items-center justify-center"
+                class="relative aspect-square flex items-center justify-center"
                 style={{ backgroundColor: product.backgroundColor }}
               >
                 <ResponsiveImage

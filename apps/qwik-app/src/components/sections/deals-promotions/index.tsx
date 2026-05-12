@@ -29,8 +29,8 @@ export default component$<DealsPromotionsProps>(({ products }) => {
 
   return (
     <section class="w-full py-6 md:py-8 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2 class="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-4 md:mb-6">
           Deals & Promotions
         </h2>
 
@@ -38,9 +38,9 @@ export default component$<DealsPromotionsProps>(({ products }) => {
           {products.map((product) => (
             <div
               key={product.id}
-              class="flex-none w-56 md:w-64 lg:w-auto bg-white rounded-lg overflow-hidden snap-start"
+              class="flex-none w-52 md:w-60 lg:w-auto bg-white overflow-hidden snap-start border border-[#e5e7eb] rounded-sm"
             >
-              <div class="relative aspect-square bg-gray-100">
+              <div class="relative aspect-square bg-gray-50">
                 <ResponsiveImage
                   sources={[
                     {

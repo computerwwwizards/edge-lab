@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik'
 import { tv } from 'tailwind-variants/lite'
 
 const utilityBarVariants = tv({
-  base: 'bg-white rounded-lg border border-gray-200 shadow-sm md:rounded-none md:border-0 md:border-b md:shadow-none'
+  base: 'bg-white'
 })
 
 interface UtilityBarProps {
@@ -14,8 +14,8 @@ export default component$<UtilityBarProps>(({
 }: Readonly<UtilityBarProps>) => {
   return (
     <div class={utilityBarVariants({ class: className })}>
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-center justify-between md:justify-start md:gap-4 py-3 md:py-4">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <div class="flex items-center justify-between md:justify-start md:gap-4 py-2 md:py-3">
           <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors md:flex-initial flex-1">
             <svg
               class="w-5 h-5"

@@ -4,8 +4,8 @@ import Input, { InputWrapper } from '~/components/ui/input'
 
 export default component$(() => {
   return (
-    <section class="w-full py-12 md:py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
+    <section class="w-full py-10 md:py-14 bg-white">
+      <div class="max-w-[1320px] mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
           <div class="mb-4 md:mb-6 flex justify-center">
             <svg
@@ -33,7 +33,7 @@ export default component$(() => {
             </svg>
           </div>
 
-          <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">
+          <h2 class="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-3 md:mb-4">
             Get News and Special Offers!
           </h2>
 
@@ -64,20 +64,20 @@ export default component$(() => {
               />
             </InputWrapper>
 
+            <Button
+              appearance="primary"
+              fullWidth
+              type="button"
+            >
+              Subscribe
+            </Button>
+
             <p class="text-xs md:text-sm text-gray-600 text-center">
               By subscribing to our newsletter you agree to to our{' '}
               <a href="#" class="text-blue-600 hover:underline">
                 Privacy Policy
               </a>
             </p>
-
-            <Button
-              appearance="secondary"
-              fullWidth
-              type="button"
-            >
-              Subscribe
-            </Button>
           </form>
         </div>
       </div>

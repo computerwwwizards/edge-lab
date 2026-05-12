@@ -13,42 +13,35 @@ export interface HeroProps {
 
 export default component$<HeroProps>(({ title, subtitle, mobileBackgroundImage, desktopBackgroundImage, ctaText, ctaUrl }) => {
   return (
-    <section class="w-full min-h-screen">
-      <div class="max-w-7xl mx-auto px-4 min-h-screen flex flex-col lg:flex-row">
-        <div class="w-full lg:w-1/2 aspect-square lg:aspect-auto lg:min-h-screen flex items-center justify-center bg-linear-to-br from-gray-100 to-gray-200">
-          <ResponsiveImage
-            sources={[
-              { media: '(max-width: 767px)', srcset: mobileBackgroundImage },
-              { media: '(min-width: 768px)', srcset: desktopBackgroundImage }
-            ]}
-            alt="Hero product"
-            src={desktopBackgroundImage}
-            width={320}
-            height={301}
-            fetchPriority="high"
-            loading="eager"
-            pictureProps={{
-              class: "w-full h-full"
-            }}
-            class="w-full h-full object-cover"
-          />
-        </div>
+    <section class="w-full overflow-hidden">
+      <div>
+        <div class="bg-[#0366dd] max-w-[1320px] mx-auto relative lg:h-[496px]">
 
-        <div class="w-full lg:w-1/2 lg:min-h-screen bg-linear-to-br from-blue-500 via-blue-600 to-blue-700 flex items-center justify-start px-8 py-16 lg:py-24 lg:px-16 lg:order-first">
-          <div class="w-full max-w-lg text-white">
-            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div class="w-full lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full overflow-hidden">
+            <ResponsiveImage
+              sources={[
+                { media: '(max-width: 1023px)', srcset: mobileBackgroundImage },
+                { media: '(min-width: 1024px)', srcset: desktopBackgroundImage }
+              ]}
+              alt="Hero product"
+              src={desktopBackgroundImage}
+              width={660}
+              height={496}
+              fetchPriority="high"
+              loading="eager"
+              pictureProps={{ class: "w-full h-full" }}
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="relative lg:w-1/2 px-8 py-10 lg:py-16 xl:py-24 text-white">
+            <h1 class="text-3xl md:text-4xl lg:text-[36px] xl:text-[56px] font-bold mb-4 lg:mb-6 leading-tight">
               {title}
             </h1>
-
-            <p class="text-lg lg:text-xl mb-10 text-white/90 leading-relaxed">
+            <p class="text-sm md:text-base lg:text-[18px] xl:text-[20px] mb-8 lg:mb-10 text-white/90 leading-relaxed">
               {subtitle}
             </p>
-
-            <Button
-              appearance="secondary"
-              as="a"
-              href={ctaUrl}
-            >
+            <Button appearance="secondary" as="a" href={ctaUrl}>
               <span class="flex items-center gap-2">
                 {ctaText}
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,6 +50,7 @@ export default component$<HeroProps>(({ title, subtitle, mobileBackgroundImage, 
               </span>
             </Button>
           </div>
+
         </div>
       </div>
     </section>
