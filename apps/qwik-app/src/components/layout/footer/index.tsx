@@ -3,7 +3,27 @@ import { component$ } from '@builder.io/qwik'
 export default component$(() => {
   return (
     <footer class="bg-[#f1f2f3] text-[#171a1c]">
-      <div class="max-w-[1320px] mx-[auto] px-4 pt-10 pb-8">
+
+      <div class="max-w-[1320px] mx-auto border-b border-[#e5e7eb]">
+        <ul class="flex overflow-x-auto scrollbar-hide md:overflow-visible md:justify-center list-none m-0 px-10 py-10">
+          {[
+            { icon: '/icons/Truck.svg', title: 'Free', sub: 'Shipping' },
+            { icon: '/icons/Calendar.svg', title: 'Free', sub: 'Return' },
+            { icon: '/icons/Storefront.svg', title: 'Pickup', sub: 'Options' },
+            { icon: '/icons/ShieldCheck.svg', title: 'Trusted', sub: 'by Safecon' },
+          ].map((b, i) => (
+            <li key={i} class={`flex-none flex items-center gap-3 pr-10 mr-10 ${i < 3 ? 'border-r border-[#e3e6e8]' : 'pr-0 mr-0'}`}>
+              <img src={b.icon} alt={b.title} width="32" height="32" class="w-8 h-8 shrink-0" />
+              <div>
+                <p class="text-sm text-[#171a1c] leading-tight">{b.title}</p>
+                <p class="text-sm text-[#171a1c] leading-tight">{b.sub}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="max-w-[1320px] mx-auto px-4 pt-10 pb-8">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-10">
 
           <div>
@@ -45,37 +65,32 @@ export default component$(() => {
           <div>
             <h3 class="font-semibold text-[#171a1c] mb-4 text-sm">Follow Us</h3>
             <div class="flex items-center gap-3 mb-6">
-              <a href="#" class="text-gray-500 hover:text-[#171a1c] transition-colors" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
-                </svg>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-[#171a1c] transition-colors" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                </svg>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-[#171a1c] transition-colors" aria-label="Twitter">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-[#171a1c] transition-colors" aria-label="YouTube">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-                  <polygon fill="#f1f2f3" points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02"/>
-                </svg>
-              </a>
+              {[
+                { icon: '/icons/Facebook.svg', label: 'Facebook' },
+                { icon: '/icons/Instagram.svg', label: 'Instagram' },
+                { icon: '/icons/Pinterest.svg', label: 'Pinterest' },
+                { icon: '/icons/Twitter.svg', label: 'Twitter' },
+              ].map(s => (
+                <a key={s.label} href="#" class="text-gray-500 hover:text-[#171a1c] transition-colors" aria-label={s.label}>
+                  <img src={s.icon} alt={s.label} width="20" height="20" class="w-5 h-5" />
+                </a>
+              ))}
             </div>
 
             <h3 class="font-semibold text-[#171a1c] mb-3 text-sm">Payment Methods</h3>
-            <ul class="space-y-1 list-none p-0 m-0">
-              {['Diners Club', 'Visa', 'Mastercard', 'Elo Card', 'PayPal', 'GooglePay', 'Apple Pay'].map(p => (
-                <li key={p} class="text-gray-500 text-xs">{p}</li>
+            <div class="flex flex-wrap gap-2">
+              {[
+                { icon: '/icons/Diners.svg', label: 'Diners Club' },
+                { icon: '/icons/Visa.svg', label: 'Visa' },
+                { icon: '/icons/Mastercard.svg', label: 'Mastercard' },
+                { icon: '/icons/EloCard.svg', label: 'Elo Card' },
+                { icon: '/icons/PayPal.svg', label: 'PayPal' },
+                { icon: '/icons/GooglePay.svg', label: 'GooglePay' },
+                { icon: '/icons/ApplePay.svg', label: 'Apple Pay' },
+              ].map(p => (
+                <img key={p.label} src={p.icon} alt={p.label} width="32" height="20" class="h-5 w-auto" title={p.label} />
               ))}
-            </ul>
+            </div>
           </div>
 
         </div>
@@ -89,6 +104,7 @@ export default component$(() => {
           <a href="#" class="text-xl font-bold text-[#171a1c] shrink-0">Brandless</a>
         </div>
       </div>
+
     </footer>
   )
 })

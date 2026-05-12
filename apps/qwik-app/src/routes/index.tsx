@@ -28,27 +28,27 @@ export default component$(() => {
         <Benefits
           benefits={[
             {
-              icon: 'https://api.iconify.design/mdi/truck-delivery.svg?color=%23374151',
+              icon: '/icons/Truck.svg',
               title: 'Buy online',
               description: 'Get Free Shipping'
             },
             {
-              icon: 'https://api.iconify.design/mdi/calendar-check.svg?color=%23374151',
+              icon: '/icons/Calendar.svg',
               title: 'Free return',
               description: '30 days to return'
             },
             {
-              icon: 'https://api.iconify.design/mdi/gift.svg?color=%23374151',
+              icon: '/icons/Gift.svg',
               title: 'Gift cards',
               description: '$20/$30/$40'
             },
             {
-              icon: 'https://api.iconify.design/mdi/store.svg?color=%23374151',
+              icon: '/icons/Storefront.svg',
               title: 'Physical Stores',
               description: '+40 Stores in Brazil'
             },
             {
-              icon: 'https://api.iconify.design/mdi/shield-check.svg?color=%23374151',
+              icon: '/icons/ShieldCheck.svg',
               title: 'Trusted by Safecon',
               description: 'Safety guaranteed'
             }

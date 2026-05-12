@@ -14,24 +14,22 @@ export default component$<BenefitsProps>(({ benefits }) => {
   return (
     <section class="w-full bg-white">
       <div class="max-w-[1320px] mx-auto">
-        <ul class="flex overflow-x-auto scrollbar-hide md:overflow-visible md:justify-center px-10 list-none m-0 p-0">
+        <ul class="flex overflow-x-auto scrollbar-hide md:overflow-visible md:justify-center list-none m-0 px-10 py-10">
           {benefits.map((benefit, index) => (
             <li
               key={`benefit-${index}`}
-              class="flex-none flex items-center gap-3 py-10 pr-10 md:flex-1 md:justify-center"
+              class={`flex-none flex items-center gap-3 pr-10 mr-10 ${index < benefits.length - 1 ? 'border-r border-[#e3e6e8]' : 'pr-0 mr-0'}`}
             >
-              <div class="flex items-center justify-center w-8 h-8 shrink-0">
-                <img
-                  src={benefit.icon}
-                  alt={`${benefit.title} icon`}
-                  width="32"
-                  height="32"
-                  class="w-8 h-8 object-contain"
-                />
-              </div>
+              <img
+                src={benefit.icon}
+                alt={benefit.title}
+                width="32"
+                height="32"
+                class="w-8 h-8 shrink-0"
+              />
               <div>
-                <p class="font-semibold text-[#171a1c] text-sm leading-tight">{benefit.title}</p>
-                <p class="text-gray-500 text-xs leading-tight">{benefit.description}</p>
+                <p class="text-sm text-[#171a1c] leading-tight">{benefit.title}</p>
+                <p class="text-sm text-[#171a1c] leading-tight">{benefit.description}</p>
               </div>
             </li>
           ))}
